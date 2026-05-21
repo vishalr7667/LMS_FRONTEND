@@ -66,7 +66,6 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ============ HERO ============ */}
         <section className={styles.heroSection} id="hero">
           <div className={styles.heroInner}>
             <div className={styles.heroContent}>
