@@ -1,0 +1,19 @@
+.ratingSystem {
+  display: flex;
+  justify-content: center;
+}
+
+.starsRow {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  color: #E5E7EB;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.starFilled {
+  color: var(--accent-gold, #D4A017);
+}
