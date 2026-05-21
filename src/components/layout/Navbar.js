@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import NavLink from './NavLink';
 import { useAuth } from '@/lib/auth';
-import { GraduationCap, BookOpen, ChevronRight } from 'lucide-react';
+import { BookOpen, ChevronRight } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import styles from './Navbar.module.css';
 
@@ -52,9 +52,9 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="navbar-logo">
           <span className="logo-icon">
-            <GraduationCap size={20} color="white" />
+            TB
           </span>
-          <span>VFXVault<span className={styles.logoAccent}>EDU</span></span>
+          <span>Terra<span className={styles.logoAccent}>Byte</span></span>
         </Link>
 
         {/* Desktop Navigation */}

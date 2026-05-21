@@ -1,6 +1,5 @@
 'use client';
 
-import { GraduationCap } from 'lucide-react';
 import styles from './GlobalLoader.module.css';
 
 export default function GlobalLoader() {
@@ -13,8 +12,8 @@ export default function GlobalLoader() {
         </div>
         
         <div className={styles.logo}>
-          <GraduationCap size={32} color="var(--accent-gold)" style={{ marginBottom: 12, margin: '0 auto', display: 'block' }} />
-          <span>VFXVault<span className={styles.logoAccent}>EDU</span></span>
+          <span className="logo-icon" style={{ width: 40, height: 40, fontSize: 16, margin: '0 auto 12px', display: 'flex' }}>TB</span>
+          <span>Terra<span className={styles.logoAccent}>Byte</span></span>
         </div>
         
         <div className={styles.loadingText}>Loading Excellence...</div>

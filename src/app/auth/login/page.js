@@ -35,7 +35,7 @@ export default function LoginPage() {
         <div className={styles.authHeader}>
           <div className={styles.authLogo}>
             <span>🎓</span>
-            <span>VFXVault<span className={styles.authLogoGold}>EDU</span></span>
+            <span>Terra<span className={styles.authLogoGold}>Byte</span></span>
           </div>
           <h1 className={styles.authTitle}>Welcome Back</h1>
           <p className={styles.authSubtitle}>Sign in to continue your learning journey</p>

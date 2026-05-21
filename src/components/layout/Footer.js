@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { GraduationCap } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -8,7 +7,7 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Brand */}
           <div className="footer-brand">
-            <h3><GraduationCap size={24} className="text-gold" style={{ display: 'inline', marginRight: 10, verticalAlign: 'bottom' }} /> VFXVault Education</h3>
+            <h3><span className="logo-icon" style={{ display: 'inline-flex', width: 28, height: 28, fontSize: 11, marginRight: 10, verticalAlign: 'middle' }}>TB</span> TerraByte</h3>
             <p>
               High-quality, video-based courses in VFX, game development, computer science and more.
               Learn at your own pace with structured content from industry experts.
@@ -44,7 +43,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} VFXVault Education. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} TerraByte. All rights reserved.</p>
           <div className="footer-social">
             <a href="#" aria-label="X (Twitter)">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">

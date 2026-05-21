@@ -150,7 +150,7 @@ export default function HomePage() {
         <section className={styles.featuresSection} id="features">
           <div className="container">
             <div className={styles.sectionHeader}>
-              <p className={styles.sectionSubtitle}>Why VFXVault Education?</p>
+              <p className={styles.sectionSubtitle}>Why TerraByte?</p>
               <h2 className={styles.sectionTitle}>Everything You Need to Learn</h2>
               <p className={styles.sectionDescription}>
                 A complete learning platform built for visual creators and developers

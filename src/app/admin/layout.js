@@ -48,7 +48,7 @@ function AdminSidebar({ theme, toggleTheme }) {
           <GraduationCap size={20} />
         </div>
         <div>
-          <span className={styles.brandText}>VFXVault<span className={styles.brandAccent}>EDU</span></span>
+          <span className={styles.brandText}>Terra<span className={styles.brandAccent}>Byte</span></span>
           <span className={styles.brandSub}>Admin Panel</span>
         </div>
       </div>

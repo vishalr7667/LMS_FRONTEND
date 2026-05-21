@@ -28,7 +28,7 @@ const MOCK_COURSE = {
   shortDescription: '',
   totalDuration: '0 hours', totalLessons: 0, price: 0, accessType: 'free',
   rating: { average: 0, count: 0, sum: 0 },
-  instructor: { name: 'VFXVault Team' },
+  instructor: { name: 'TerraByte Team' },
   features: [],
 };
 
@@ -315,7 +315,7 @@ export default function CourseDetailPage() {
                     ) : <User size={48} />}
                   </div>
                   <div className={styles.instructorInfo}>
-                    <h3 className={styles.instructorName}>{course.instructor?.name || 'VFXVault Team'}</h3>
+                    <h3 className={styles.instructorName}>{course.instructor?.name || 'TerraByte Team'}</h3>
                     <p className={styles.instructorTitle}>Expert Content Creator & Educator</p>
                     <div className={styles.instructorStats}>
                       <span><Star size={14} style={{ marginRight: 4 }} /> 4.9 Instructor Rating</span>

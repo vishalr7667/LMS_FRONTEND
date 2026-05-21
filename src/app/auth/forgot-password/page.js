@@ -34,7 +34,7 @@ function ForgotPasswordForm() {
         <div className={styles.authHeader}>
           <div className={styles.authLogo}>
             <span>🎓</span>
-            <span>VFXVault<span className={styles.authLogoGold}>EDU</span></span>
+            <span>Terra<span className={styles.authLogoGold}>Byte</span></span>
           </div>
           <h1 className={styles.authTitle}>Reset Password</h1>
           <p className={styles.authSubtitle}>Enter your email and we&apos;ll send a reset link</p>

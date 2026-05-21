@@ -4,11 +4,11 @@ import { ThemeProvider } from '@/lib/theme';
 import PublicWrapper from '@/components/layout/PublicWrapper';
 
 export const metadata = {
-  title: 'VFXVault Education — Learn VFX, Game Dev & Computer Science',
+  title: 'TerraByte — Learn VFX, Game Dev & Computer Science',
   description: 'Master VFX, game development, and computer science through structured, video-based courses. Learn at your own pace with high-quality content from industry experts.',
-  keywords: 'VFX, education, courses, game development, computer science, programming, visual effects, online learning',
+  keywords: 'TerraByte, VFX, education, courses, game development, computer science, programming, visual effects, online learning',
   openGraph: {
-    title: 'VFXVault Education',
+    title: 'TerraByte',
     description: 'Master VFX, game development, and computer science through structured, video-based courses.',
     type: 'website',
   },
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
                   var theme = localStorage.getItem('theme');
                   var supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
                   if (!theme && supportDarkMode) theme = 'dark';
-                  if (!theme) theme = 'light';
+                  if (!theme) theme = 'dark';
                   document.documentElement.setAttribute('data-theme', theme);
                 } catch (e) {}
               })();

@@ -49,7 +49,7 @@ function ResetPasswordForm() {
           <div className={styles.authHeader}>
             <div className={styles.authLogo}>
               <span>🎓</span>
-              <span>VFXVault<span className={styles.authLogoGold}>EDU</span></span>
+              <span>Terra<span className={styles.authLogoGold}>Byte</span></span>
             </div>
             <h1 className={styles.authTitle}>Invalid Link</h1>
             <p className={styles.authSubtitle}>This password reset link is invalid or has expired.</p>
@@ -68,7 +68,7 @@ function ResetPasswordForm() {
         <div className={styles.authHeader}>
           <div className={styles.authLogo}>
             <span>🎓</span>
-            <span>VFXVault<span className={styles.authLogoGold}>EDU</span></span>
+            <span>Terra<span className={styles.authLogoGold}>Byte</span></span>
           </div>
           <h1 className={styles.authTitle}>Set New Password</h1>
           <p className={styles.authSubtitle}>Enter your new password below</p>

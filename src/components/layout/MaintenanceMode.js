@@ -41,7 +41,7 @@ export default function MaintenanceMode({ siteName, siteTagline }) {
         
         <h1 className={styles.title}>Under Maintenance</h1>
         <p className={styles.description}>
-          <strong>{siteName || 'VFXVault'}</strong> is currently undergoing scheduled improvements to enhance your learning experience. We'll be back shortly!
+          <strong>{siteName || 'TerraByte'}</strong> is currently undergoing scheduled improvements to enhance your learning experience. We'll be back shortly!
         </p>
         
         <div className={styles.tagline}>
