@@ -16,6 +16,22 @@ export default function Navbar() {
   const [loadingCourses, setLoadingCourses] = useState(true);
   const [activeCategory, setActiveCategory] = useState(null);
 
+  const toggleMobileMenu = () => {
+    setMobileOpen((prev) => {
+      const next = !prev;
+      if (next) setProfileOpen(false);
+      return next;
+    });
+  };
+
+  const toggleProfileMenu = () => {
+    setProfileOpen((prev) => {
+      const next = !prev;
+      if (next) setMobileOpen(false);
+      return next;
+    });
+  };
+
   const fetchCourses = useCallback(async () => {
     try {
       const { data } = await api.get('/courses');
@@ -54,7 +70,7 @@ export default function Navbar() {
           <span className="logo-icon">
             TB
           </span>
-          <span>Terra<span className={styles.logoAccent}>Byte</span></span>
+          <span className="logo-text">Terra<span className={styles.logoAccent}>Byte</span></span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -126,7 +142,7 @@ export default function Navbar() {
               <div className={styles.profileWrapper}>
                 <button
                   className={styles.profileBtn}
-                  onClick={() => setProfileOpen(!profileOpen)}
+                  onClick={toggleProfileMenu}
                   id="profile-menu-btn"
                 >
                   <div className={styles.avatar}>
@@ -184,8 +200,8 @@ export default function Navbar() {
 
           {/* Mobile toggle */}
           <button
-            className="navbar-mobile-toggle"
-            onClick={() => setMobileOpen(!mobileOpen)}
+            className={`navbar-mobile-toggle ${mobileOpen ? 'open' : ''}`}
+            onClick={toggleMobileMenu}
             id="mobile-menu-btn"
             aria-label="Toggle menu"
           >
@@ -203,10 +219,42 @@ export default function Navbar() {
           <NavLink href="/courses" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Courses</NavLink>
           <NavLink href="/resources" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Resources</NavLink>
           <NavLink href="/pricing" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Pricing</NavLink>
-          {!user && (
+          {!user ? (
             <div className={styles.mobileActions}>
               <Link href="/auth/login" className="btn btn-ghost" onClick={() => setMobileOpen(false)}>Sign In</Link>
               <Link href="/auth/register" className="btn btn-primary" onClick={() => setMobileOpen(false)}>Get Started</Link>
+            </div>
+          ) : (
+            <div className={styles.mobileProfileSection}>
+              <div className={styles.mobileUserStats}>
+                <div className={styles.mobileAvatar}>
+                  {user.avatar ? (
+                    <img src={user.avatar} alt={user.name} />
+                  ) : (
+                    <span>{user.name?.charAt(0).toUpperCase()}</span>
+                  )}
+                </div>
+                <div className={styles.mobileUserInfo}>
+                  <div className={styles.mobileName}>{user.name}</div>
+                  <div className={styles.mobileEmail}>{user.email}</div>
+                </div>
+              </div>
+              <div className={styles.mobileProfileLinks}>
+                <Link href="/dashboard" className={styles.mobileProfileLink} onClick={() => setMobileOpen(false)}>
+                  My Dashboard
+                </Link>
+                {user.role === 'admin' && (
+                  <Link href="/admin" className={styles.mobileProfileLink} onClick={() => setMobileOpen(false)}>
+                    Admin Panel
+                  </Link>
+                )}
+                <button
+                  className={styles.mobileLogoutBtn}
+                  onClick={() => { logout(); setMobileOpen(false); }}
+                >
+                  Sign Out
+                </button>
+              </div>
             </div>
           )}
         </div>
