@@ -174,14 +174,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(4, 14, 9, 0.98);
-  backdrop-filter: blur(16px);
+  background: var(--bg1);
   padding: var(--space-6);
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
   z-index: 999;
   animation: fadeIn 0.2s ease;
+  overflow-y: auto;
 }
 
 .mobileLink {
@@ -360,9 +360,6 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
-:global([data-theme='light']) .mobileMenu {
-  background: rgba(240, 250, 245, 0.98);
-}
 
 .authPlaceholder {
   width: 100px;
