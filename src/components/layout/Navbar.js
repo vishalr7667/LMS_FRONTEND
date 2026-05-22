@@ -60,10 +60,23 @@ export default function Navbar() {
     fetchCourses();
   }, [fetchCourses]);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
   const categories = Object.keys(groupedCourses).sort();
 
   return (
-    <nav className="navbar" id="main-navbar">
+    <>
+      <nav className="navbar" id="main-navbar">
       <div className="navbar-inner">
         {/* Logo */}
         <Link href="/" className="navbar-logo">
@@ -211,9 +224,10 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+    </nav>
 
-      {/* Mobile Menu */}
-      {mobileOpen && (
+    {/* Mobile Menu */}
+    {mobileOpen && (
         <div className={styles.mobileMenu} id="mobile-menu">
           <NavLink href="/" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Home</NavLink>
           <NavLink href="/courses" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Courses</NavLink>
@@ -259,6 +273,6 @@ export default function Navbar() {
           )}
         </div>
       )}
-    </nav>
+    </>
   );
 }
